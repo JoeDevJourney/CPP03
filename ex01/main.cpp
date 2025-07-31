@@ -6,7 +6,7 @@
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:45:10 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/07/31 14:39:57 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/07/31 15:42:07 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	main()
 {
+
 	ClapTrap clap1("Attacker");
 	ClapTrap clap2("Defender");
 

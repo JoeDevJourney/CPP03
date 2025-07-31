@@ -6,11 +6,11 @@
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:45:10 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/07/31 14:39:57 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/07/31 16:17:57 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Claptrap.hpp"
+#include "ClapTrap.hpp"
 
 int	main()
 {

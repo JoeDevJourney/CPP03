@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Claptrap.cpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:45:38 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/07/31 14:39:38 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/07/31 16:19:01 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Claptrap.hpp"
+#include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string name)
-	: _name(name), HitPoints(10), EnergyPoints(10), AttackDamage(0)
+	: _name(name), HitPoints(defaultHitPoints), EnergyPoints(defautlEnergyPoints), AttackDamage(defaultAttackDamage)
 {
 	std::cout << "ClapTrap " << _name << " constructed!" << std::endl;
 }

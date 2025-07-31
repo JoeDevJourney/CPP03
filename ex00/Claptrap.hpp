@@ -6,7 +6,7 @@
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:45:27 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/07/29 17:24:41 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/07/31 15:14:57 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ private:
 
 public:
 	ClapTrap(std::string name);
+	~ClapTrap();
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
-	~ClapTrap();
 };
 
 #endif

@@ -6,12 +6,13 @@
 #    By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/31 14:42:50 by jbrandt           #+#    #+#              #
-#    Updated: 2025/07/31 14:42:58 by jbrandt          ###   ########.fr        #
+#    Updated: 2025/07/31 15:27:11 by jbrandt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = main.cpp \
-Claptrap.cpp
+Claptrap.cpp \
+ScavTrap.cpp 
 OBJDIR = obj
 OBJ = $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
 NAME = ex01
