@@ -6,35 +6,35 @@
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:45:10 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/07/31 15:42:07 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/07/31 19:00:43 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Claptrap.hpp"
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main()
 {
+	ClapTrap clap("Claptrap");
+	ScavTrap scav("Serena");
 
-	ClapTrap clap1("Attacker");
-	ClapTrap clap2("Defender");
+	clap.attack("Trainings Dummy");
+	scav.attack("Trainings Dummy");
 
-	clap1.attack("Defender");
-	clap2.takeDamage(3);
+	clap.takeDamage(3);
+	scav.takeDamage(30);
 
-	clap2.beRepaired(2);
-	clap2.attack("Attacker");
+	clap.beRepaired(5);
+	scav.beRepaired(15);
 
-	clap1.takeDamage(5);
-	clap1.beRepaired(4);
-	clap1.attack("Defender");
+	scav.guardGate();
 
-	for (int i = 0; i < 10; i++) 
-		clap1.attack("Defender");
-
-	clap1.beRepaired(1);
-	clap1.takeDamage(20);
-	clap1.attack("Defender");
-	clap1.takeDamage(20);
-	clap1.beRepaired(1);
-	return (0);
+	for (int i = 0; i < 51; i++) 
+		scav.attack("Trainings Dummy");
+	scav.takeDamage(85);
+	scav.attack("Trainings Dummy");
+	scav.takeDamage(1);
+	scav.beRepaired(1);
+	scav.guardGate();
+	return(0);
 }

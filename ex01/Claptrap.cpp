@@ -6,14 +6,14 @@
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:45:38 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/07/31 16:19:01 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/07/31 19:07:07 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string name)
-	: _name(name), HitPoints(defaultHitPoints), EnergyPoints(defautlEnergyPoints), AttackDamage(defaultAttackDamage)
+	: _name(name), HitPoints(defaultHitPoints), EnergyPoints(defaultEnergyPoints), AttackDamage(defaultAttackDamage)
 {
 	std::cout << "ClapTrap " << _name << " constructed!" << std::endl;
 }
@@ -68,6 +68,6 @@ void ClapTrap::beRepaired(unsigned int amount)
 	}
 	HitPoints += amount;
 	EnergyPoints--;
-	std::cout << "ClapTrap " << _name << "just repair itself for "
+	std::cout << "ClapTrap " << _name << " just repaired itself for "
 			  << amount << " HP. Total HP now: " << HitPoints << std::endl;
 }

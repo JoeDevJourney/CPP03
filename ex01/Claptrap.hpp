@@ -6,7 +6,7 @@
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:45:27 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/07/31 16:17:12 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/07/31 17:24:33 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class ClapTrap {
 
 private:
 	static const int defaultHitPoints = 10;
-	static const int defautlEnergyPoints = 10;
+	static const int defaultEnergyPoints = 10;
 	static const int defaultAttackDamage = 0;
 
 protected:
