@@ -6,7 +6,7 @@
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:45:10 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/08/04 14:34:59 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/08/04 14:43:52 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	main()
 
 	for (int i = 0; i < 100; i++) 
 		frag.attack("Trainings Dummy");
+	frag.attack("Trainings Dummy");
 	frag.takeDamage(81);
 	frag.attack("Trainings Dummy");
 	frag.takeDamage(1);

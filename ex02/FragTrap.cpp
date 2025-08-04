@@ -6,11 +6,19 @@
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 19:32:53 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/08/04 14:22:54 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/08/04 16:24:49 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+
+FragTrap::FragTrap() : ClapTrap("Unnamed FragTrap")
+{
+	HitPoints    = defaultHitPoints;
+	EnergyPoints = defaultEnergyPoints;
+	AttackDamage = defaultAttackDamage;
+	std::cout << "FragTrap " << _name << " constructed with default constructer" << std::endl;
+}
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
@@ -18,6 +26,19 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	EnergyPoints = defaultEnergyPoints;
 	AttackDamage = defaultAttackDamage;
 	std::cout << "FragTrap " << _name << " has arrived!" << std::endl;
+}
+
+FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other)
+{
+	std::cout << "FragTrap " << _name << " copied from another FragTrap." << std::endl;
+}
+
+FragTrap& FragTrap::operator=(const FragTrap& other)
+{
+	if (this != &other)
+		ClapTrap::operator=(other);
+	std::cout << "FragTrap " << _name << "copy assigned." << std::endl;
+	return (*this);
 }
 
 FragTrap::~FragTrap()

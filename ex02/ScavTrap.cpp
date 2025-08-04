@@ -6,11 +6,19 @@
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 14:47:08 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/07/31 19:30:22 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/08/04 16:23:29 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap() : ClapTrap("Unnamed ScavTrap")
+{
+	HitPoints    = defaultHitPoints;
+	EnergyPoints = defaultEnergyPoints;
+	AttackDamage = defaultAttackDamage;
+	std::cout << "ScavTrap " << _name << " constructed with default constructer" << std::endl;
+}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
@@ -18,6 +26,19 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	EnergyPoints = defaultEnergyPoints;
 	AttackDamage = defaultAttackDamage;
 	std::cout << "ScavTrap " << _name << " constructed!" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other)
+{
+	std::cout << "ScavTrap " << _name << " copied from another ScavTrap" << std::endl;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& other)
+{
+	if (this!= &other)
+		ClapTrap::operator=(other);
+	std::cout << "ScavTrap " << _name << " copy assigned." << std::endl;
+	return (*this);
 }
 
 ScavTrap::~ScavTrap() {

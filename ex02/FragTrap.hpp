@@ -6,7 +6,7 @@
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 19:32:33 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/07/31 19:42:03 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/08/04 16:21:53 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ private:
 	static const int defaultAttackDamage = 30;
 
 public:
+	FragTrap();
 	FragTrap(std::string name);
+	FragTrap(const FragTrap &other);
+	FragTrap &operator=(const FragTrap &other);
 	~FragTrap();
 
 	void highFivesGuys(void);

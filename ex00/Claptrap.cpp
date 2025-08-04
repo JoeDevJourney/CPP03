@@ -6,16 +6,47 @@
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 12:45:38 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/07/31 17:28:08 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/08/04 16:09:49 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap()
+	: _name("Default"), HitPoints(10), EnergyPoints(10), AttackDamage(0)
+{
+	std::cout << "ClapTrap " << _name << " constructed with default constructer" << std::endl;
+}
+
 ClapTrap::ClapTrap(std::string name)
 	: _name(name), HitPoints(10), EnergyPoints(10), AttackDamage(0)
 {
 	std::cout << "ClapTrap " << _name << " constructed!" << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& other)
+	: _name(other._name), HitPoints(other.HitPoints),
+	EnergyPoints(other.EnergyPoints),
+	AttackDamage(other.AttackDamage) 
+{
+	std::cout << "ClapTrap " << _name << " copy constructed" << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& other)
+{
+	if (this != &other)
+	{
+		_name = other._name;
+		HitPoints = other.HitPoints;
+		EnergyPoints = other.EnergyPoints;
+		AttackDamage = other.AttackDamage;
+	}
+	std::cout << "ClapTrap " << _name << " assigned via copy assignment." << std::endl;
+	return (*this);
+}
+
+ClapTrap::~ClapTrap() {
+	std::cout << "ClapTrap " << _name << " destroyed!" << std::endl;
 }
 
 ClapTrap::~ClapTrap() {
@@ -58,7 +89,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (HitPoints <= 0)
 	{
-		std::cout << "ClapTrap " << _name << " is already dead and can't repair himself." << std::endl;
+		std::cout << "ClapTrap " << _name << " is already dead and can't be repaired anymore." << std::endl;
 		return;
 	}
 	if (EnergyPoints <= 0)
