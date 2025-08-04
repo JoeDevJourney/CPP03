@@ -6,16 +6,17 @@
 #    By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/31 19:30:41 by jbrandt           #+#    #+#              #
-#    Updated: 2025/07/31 19:30:44 by jbrandt          ###   ########.fr        #
+#    Updated: 2025/08/04 14:21:15 by jbrandt          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = main.cpp \
 ClapTrap.cpp \
-ScavTrap.cpp 
+ScavTrap.cpp \
+FragTrap.cpp
 OBJDIR = obj
 OBJ = $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
-NAME = ex01
+NAME = ex02
 
 COMPILER = c++
 FLAGS = -Wall -Wextra -Werror -std=c++17
