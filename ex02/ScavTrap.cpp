@@ -6,7 +6,7 @@
 /*   By: jbrandt <jbrandt@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 14:47:08 by jbrandt           #+#    #+#             */
-/*   Updated: 2025/08/04 16:23:29 by jbrandt          ###   ########.fr       */
+/*   Updated: 2025/08/04 18:36:13 by jbrandt          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void ScavTrap::attack(const std::string& target)
 		return;
 	}
 	EnergyPoints--;
-	std::cout << "ScavTrap " << _name << " makes a heavy attack " << target
+	std::cout << "ScavTrap " << _name << " makes a heavy attack at " << target
 			  << ", causing " << AttackDamage << " points of damage!" << std::endl;
 }
 
